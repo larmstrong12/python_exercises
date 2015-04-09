@@ -20,14 +20,14 @@ while gallons is None:
 gallons = float(gallons)
 
 liters = gallons * 3.7854
-barrels = round(gallons / 19.5 ,2)
+barrels = (gallons / 19.5)
 CO2 = round(gallons * 20.0, 2)
 eth_Gas = round((gallons * 115000) / 75700, 2)
 price = round(gallons * float(4), 2)
 
-print "{} Gallons".format(gallons)
-print "{} Liters".format(liters)
-print "{} Barrels of Oil Required".format(barrels)
-print "{} CO2 Produced in Pounds".format(CO2)
-print "{} gallons of ethenol is equivalent to energy amount in ethenol gas".format(eth_Gas)
-print "${} Per Gallon".format(price)
+print "%.2f Gallons" % gallons
+print "%.3f Liters" % liters
+print "%.3f Barrels of Oil Required" % barrels
+print "%.3f CO2 Produced in Pounds" % CO2
+print "%.3f gallons of ethenol is equal to the same amount of energy in ethenol gas" % eth_Gas
+print "$%.2f Per Gallon" % price
