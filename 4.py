@@ -1,16 +1,18 @@
 import time
 import sys
+SEPERATE = "******************************"
 
 
 def main_menu():
-    print "Menu\n1. Write input to file\n2. Write input to screen\n3. Quit"
+    print SEPERATE + "\nEXERCISE 4 - MENU\n" + SEPERATE
+    print "1. Write input to file\n2. Write input to screen\n3. Quit" + SEPERATE
 
 
 def main():
     main_menu()
     choice = None
     while choice is None:
-        user_input = raw_input("Please enter your choice: ")
+        user_input = raw_input("Enter your choice [1-3]: ")
         if user_input in ["1", "2", "3"]:
             choice = user_input
         else:
@@ -19,7 +21,7 @@ def main():
             main_menu()
 
     if choice in ["1", "2"]:
-        user_input = raw_input("Enter the text you want to save: ")
+        user_input = raw_input("Enter a phrase: ")
         if choice == "1":
             with open("output.txt", "a") as f:
                 f.write("\n" + user_input)
@@ -32,7 +34,7 @@ def main():
 
         else:
             user_input = user_input.replace('\n')
-            print user_input
+            print "You entered:" + user_input
             time.sleep(5)
             main()
     else:
