@@ -1,11 +1,9 @@
-import time
-import sys
 SEPERATE = "******************************"
 
 
 def main_menu():
     print SEPERATE + "\nEXERCISE 4 - MENU\n" + SEPERATE
-    print "1. Write input to file\n2. Write input to screen\n3. Quit" + SEPERATE
+    print "1. Write input to file\n2. Write input to screen\n3. Quit\n" + SEPERATE
 
 
 def main():
@@ -17,8 +15,6 @@ def main():
             choice = user_input
         else:
             print "You entered an invalid choice."
-            time.sleep(3)
-            main_menu()
 
     if choice in ["1", "2"]:
         user_input = raw_input("Enter a phrase: ")
@@ -29,18 +25,12 @@ def main():
                 print "Done.\nFile will close on exit."
             else:
                 print "Done."
-            time.sleep(5)
-            main()
 
         else:
             user_input = user_input.replace('\n')
             print "You entered:" + user_input
-            time.sleep(5)
-            main()
     else:
         print "Exiting"
-        time.sleep(3)
-        sys.exit(0)
 
-if __name__ == '__main__':
-    main()
+
+main()
