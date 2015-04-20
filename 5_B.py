@@ -1,5 +1,3 @@
-import string
-import random
 from collections import Counter
 
 print "******************************"
@@ -15,11 +13,12 @@ def main():
         count = 0
         for i in f:
             c = Counter(i)
-            print i + ' '.join('{} ==> {}'.format(key, val) for key, val in c.items())
+            print ' '.join('{} ==> {}'.format(key, val) for key, val in c.items())
             print
             count += 1
 
 
-if __name__ == '__main__': main()
+if __name__ == '__main__':
+    main()
 print "*******************************"
 

@@ -1,11 +1,18 @@
-def main():
-    first_file()
+def first_file():
+    pass
+
+def second_file():
     try:
-        f = open("text.txt", "w")
+        f = open("text.txt", "r")
+        f.write("This is a test")
     except:
         print IOError("This file does not exist")
 
-def first_file("text.txt"):
-
-def second_file("text.txt"):
-
+def main():
+    first_file()
+    second_file()
+    try:
+        f = open("text.txt", "w")
+        f.write("This is a test")
+    except:
+        print IOError("This file does not exist")
